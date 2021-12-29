@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyTenantData</string>
+    <string name="add_property">Add Property</string>
+    <string name="add_tenant">Add Tenant</string>
+    <string name="properti_list">All Property</string>
+    <string name="tenant_list">"AllTenant "</string>
+</resources>

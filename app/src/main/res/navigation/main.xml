@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mytenantdata.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addPropertyFragment"
+            app:destination="@id/addPropertyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addTenantFragment"
+            app:destination="@id/addTenantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_propertyListFragment"
+            app:destination="@id/propertyListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tenantListFragment"
+            app:destination="@id/tenantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPropertyFragment"
+        android:name="com.example.mytenantdata.fragments.AddPropertyFragment"
+        android:label="Add Property"
+        tools:layout="@layout/fragment_add_property" >
+        <action
+            android:id="@+id/action_addPropertyFragment_to_propertyListFragment"
+            app:destination="@id/propertyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTenantFragment"
+        android:name="com.example.mytenantdata.fragments.AddTenantFragment"
+        android:label="Add Tenant"
+        tools:layout="@layout/fragment_add_tenant" >
+        <action
+            android:id="@+id/action_addTenantFragment_to_tenantListFragment"
+            app:destination="@id/tenantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyListFragment"
+        android:name="com.example.mytenantdata.fragments.PropertyListFragment"
+        android:label="fragment_property_list"
+        tools:layout="@layout/fragment_property_list" >
+        <argument
+            android:name="propertyModel"
+            app:argType="com.example.mytenantdata.model.Properti"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/tenantListFragment"
+        android:name="com.example.mytenantdata.fragments.TenantListFragment"
+        android:label="fragment_tenant_list"
+        tools:layout="@layout/fragment_tenant_list" >
+        <argument
+            android:name="tenantModel"
+            app:argType="com.example.mytenantdata.model.Tenant"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
