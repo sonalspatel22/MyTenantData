@@ -16,11 +16,12 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/name"
         android:inputType="textPersonName"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="aaaa" />
 
     <EditText
         android:id="@+id/editTextTextPropertyAddress"
@@ -28,24 +29,63 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/address"
         android:inputType="textPersonName"
-        android:hint="Address"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPropertyName"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPropertyName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPropertyName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPropertyName"
+        android:autofillHints="aaaa" />
 
     <TextView
         android:id="@+id/addPropertytextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Add Property"
-        android:padding="16dp"
+        android:layout_marginTop="32dp"
         android:background="@color/black"
+        android:padding="16dp"
+        android:text="Add Property"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRecyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captureImageTextView" />
+
+    <TextView
+        android:id="@+id/captureImageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/capture_image"
+        android:padding="8dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/imageRecyclerView"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPropertyAddress" />
+
+    <TextView
+        android:id="@+id/openGalleryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Select From Gallery"
+        android:padding="8dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/captureImageTextView"
+        app:layout_constraintStart_toEndOf="@+id/captureImageTextView"
+        app:layout_constraintTop_toTopOf="@+id/captureImageTextView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

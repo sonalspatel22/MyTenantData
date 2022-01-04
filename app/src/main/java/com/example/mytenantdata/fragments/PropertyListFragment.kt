@@ -9,13 +9,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.mytenantdata.R
+import com.example.mytenantdata.base.BaseFragment
 import com.example.mytenantdata.data.room.PropertyDatabase
 import com.example.mytenantdata.data.room.dao.repo.PropertyRepository
 import com.example.mytenantdata.data.room.dao.repo.TenantRepository
 import com.example.mytenantdata.ui.PropertyViewModelFactory
 import com.example.mytenantdata.viewmodel.PropertyViewModel
 
-class PropertyListFragment : Fragment() {
+class PropertyListFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

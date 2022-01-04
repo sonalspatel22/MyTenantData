@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.mytenantdata.fragments.TenantListFragmentArgs
 import com.example.mytenantdata.R
+import com.example.mytenantdata.base.BaseFragment
 import com.example.mytenantdata.model.Tenant
 
 
-class TenantListFragment : Fragment() {
+class TenantListFragment : BaseFragment() {
 
 
     override fun onCreateView(

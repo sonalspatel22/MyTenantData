@@ -4,4 +4,11 @@
     <string name="add_tenant">Add Tenant</string>
     <string name="properti_list">All Property</string>
     <string name="tenant_list">"AllTenant "</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="capture_image">Capture Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_fetch_from_gallery">Images Fetch From gallary</string>
+    <string name="image_fetch_failed">Image fetch failed</string>
 </resources>

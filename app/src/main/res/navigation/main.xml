@@ -48,9 +48,8 @@
         tools:layout="@layout/fragment_property_list" >
         <argument
             android:name="propertyModel"
-            app:argType="com.example.mytenantdata.model.Properti"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:argType="com.example.mytenantdata.model.Property"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/tenantListFragment"

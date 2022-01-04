@@ -1,26 +1,26 @@
 package com.example.mytenantdata.data.room.dao
 
 import androidx.room.*
-import com.example.mytenantdata.model.Properti
+import com.example.mytenantdata.model.Property
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PropertyDao {
 
     @Insert
-    suspend fun insert(properti: Properti)
+    suspend fun insert(property: Property)
 
     @Update
-    suspend fun update(properti: Properti)
+    suspend fun update(property: Property)
 
     @Delete
-    suspend fun delete(properti: Properti)
+    suspend fun delete(property: Property)
 
-    @Query("SELECT * FROM Properti")
-    fun getAllProperty(): Flow<List<Properti>>
+    @Query("SELECT * FROM Property")
+    fun getAllProperty(): Flow<List<Property>>
 
     @Insert
-    suspend fun insertAllProperty(vararg properti: Properti)
+    suspend fun insertAllProperty(vararg property: Property)
 
 
 }
