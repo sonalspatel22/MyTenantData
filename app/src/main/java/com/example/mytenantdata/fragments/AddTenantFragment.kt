@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.mytenantdata.R
+import com.example.mytenantdata.base.BaseFragment
 import com.example.mytenantdata.model.Tenant
 import kotlinx.android.synthetic.main.fragment_add_tenant.*
 
 
-class AddTenantFragment : Fragment() {
+class AddTenantFragment : BaseFragment() {
 
 //    lateinit var  propertyViewModel: PropertyViewModel
 

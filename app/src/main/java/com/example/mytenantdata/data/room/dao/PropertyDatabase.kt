@@ -4,12 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.mytenantdata.data.room.dao.PropertyDao
-import com.example.mytenantdata.data.room.dao.TenantDao
-import com.example.mytenantdata.model.Properti
+import androidx.room.TypeConverters
+import com.example.mytenantdata.data.room.dao.*
+import com.example.mytenantdata.model.Property
 import com.example.mytenantdata.model.Tenant
 
-@Database(entities = [Properti::class, Tenant::class], version = 1, exportSchema = true)
+@Database(entities = [Property::class, Tenant::class], version = 4, exportSchema = true)
+@TypeConverters(TenantListTypeConverters::class, MonthListTypeConverters::class,TenantTypeConverters::class)
 abstract class PropertyDatabase : RoomDatabase() {
 
     abstract fun getPropertyDao(): PropertyDao
@@ -26,7 +27,7 @@ abstract class PropertyDatabase : RoomDatabase() {
                 context.applicationContext,
                 PropertyDatabase::class.java,
                 "PropertyDataBase"
-            ).build()
+            ) .fallbackToDestructiveMigration().build()
             return instance as PropertyDatabase
 
         }
